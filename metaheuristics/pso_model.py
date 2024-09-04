@@ -53,3 +53,22 @@ class BrainTumorNet(nn.Module):
 
         return x
 
+def particle_swarm_optimization_train(models, criterion, epochs, Wmax, Wmin, c1, c2, train_loader, test_loader):
+    '''
+    :param models:
+    :param epochs:
+    :param Wmax:
+    :param Wmin:
+    :param c1:
+    :param c2:
+    :param trainloader:
+    :param testloader:
+    :return:
+    '''
+    num_models = len(models)
+
+    # Initialize the velocity of each model
+    max_V = torch.tensor(0.1).cuda
+    current_V = {}
+    current_position
+
