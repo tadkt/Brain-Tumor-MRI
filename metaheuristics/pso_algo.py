@@ -41,3 +41,12 @@ gbest_obj = pbest_obj.min()
 c1 = c2 = 0.1
 w = 0.8
 
+# One iteration
+r = np.random.rand(2)
+V = w * V + c1*r[0]*(pbest - X) + c2*r[1]*(gbest.reshape(-1,1)-X)
+X = X + V
+obj = f(X[0], X[1])
+pbest[:, (pbest_obj >= obj)] = X[:, (pbest_obj >= obj)]
+pbest_obj = np.array([pbest_obj, obj]).max(axis=0)
+gbest = pbest[:, pbest_obj.argmin()]
+gbest_obj = pbest_obj.min()
