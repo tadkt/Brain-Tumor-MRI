@@ -70,5 +70,8 @@ def particle_swarm_optimization_train(models, criterion, epochs, Wmax, Wmin, c1,
     # Initialize the velocity of each model
     max_V = torch.tensor(0.1).cuda
     current_V = {}
-    current_position
+    current_position = {}
+    best_position = {}
+    current_acc = []
+    best
 
