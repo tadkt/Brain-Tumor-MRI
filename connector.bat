@@ -25,6 +25,6 @@ goto :eof
 
 :connectWithPortForwarding
 echo Connecting to the frontend server via SSH with port forwarding...
-start ssh -i %1 -p 22222 -L localhost:29999:localhost:29999 student13@ictlab.usth.edu.vn
+start ssh -i %1 -p 22222 -L localhost:29998:localhost:29998 student13@ictlab.usth.edu.vn
 goto :eof
 
